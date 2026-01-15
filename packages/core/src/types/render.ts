@@ -1,13 +1,23 @@
 export type LayoutType = "horizontal" | "vertical";
 
-export interface RenderOptions {
-  layout: LayoutType;
+export interface RenderOptionsInput {
+  layout?: LayoutType;
   width?: number;
   height?: number;
   backgroundColor?: string;
   fontFamily?: string;
   fontSize?: number;
   fontColor?: string;
+}
+
+export interface RenderOptions {
+  layout: LayoutType;
+  width: number;
+  height: number;
+  backgroundColor: string;
+  fontFamily: string;
+  fontSize: number;
+  fontColor: string;
 }
 
 export interface RenderResult {

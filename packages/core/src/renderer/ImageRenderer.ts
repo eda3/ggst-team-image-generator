@@ -1,7 +1,7 @@
-import { createCanvas, loadImage } from "@napi-rs/canvas";
 import path from "node:path";
+import { type SKRSContext2D, createCanvas, loadImage } from "@napi-rs/canvas";
 import { characterRegistry } from "../registry/CharacterRegistry";
-import type { RenderOptions, RenderResult } from "../types/render";
+import type { RenderOptions, RenderOptionsInput, RenderResult } from "../types/render";
 import { DEFAULT_RENDER_OPTIONS } from "../types/render";
 import type { Team } from "../types/team";
 
@@ -12,19 +12,18 @@ export class ImageRenderer {
     this.assetsBasePath = assetsBasePath;
   }
 
-  async render(team: Team, options: Partial<RenderOptions> = {}): Promise<RenderResult> {
+  async render(team: Team, options: RenderOptionsInput = {}): Promise<RenderResult> {
     const opts: RenderOptions = { ...DEFAULT_RENDER_OPTIONS, ...options };
 
-    const width = opts.width!;
-    const height = opts.height!;
+    const { width, height } = opts;
 
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = opts.backgroundColor!;
+    ctx.fillStyle = opts.backgroundColor;
     ctx.fillRect(0, 0, width, height);
 
-    await this.drawTeamName(ctx, team.name, width, opts);
+    this.drawTeamName(ctx, team.name, width, opts);
     await this.drawMembers(ctx, team, width, height, opts);
 
     const buffer = canvas.toBuffer("image/png");
@@ -36,21 +35,21 @@ export class ImageRenderer {
     };
   }
 
-  private async drawTeamName(
-    ctx: ReturnType<typeof createCanvas>["prototype"]["getContext"],
+  private drawTeamName(
+    ctx: SKRSContext2D,
     teamName: string,
     canvasWidth: number,
     opts: RenderOptions
-  ): Promise<void> {
-    ctx.fillStyle = opts.fontColor!;
-    ctx.font = `bold ${opts.fontSize! + 8}px "${opts.fontFamily}"`;
+  ): void {
+    ctx.fillStyle = opts.fontColor;
+    ctx.font = `bold ${opts.fontSize + 8}px "${opts.fontFamily}"`;
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
     ctx.fillText(teamName, canvasWidth / 2, 20);
   }
 
   private async drawMembers(
-    ctx: ReturnType<typeof createCanvas>["prototype"]["getContext"],
+    ctx: SKRSContext2D,
     team: Team,
     canvasWidth: number,
     canvasHeight: number,
@@ -96,24 +95,24 @@ export class ImageRenderer {
 
         ctx.drawImage(image, iconX, iconY, iconSize, iconSize);
 
-        ctx.fillStyle = opts.fontColor!;
-        ctx.font = `${opts.fontSize! - 4}px "${opts.fontFamily}"`;
+        ctx.fillStyle = opts.fontColor;
+        ctx.font = `${opts.fontSize - 4}px "${opts.fontFamily}"`;
         ctx.textAlign = "center";
         ctx.fillText(member.playerName, x, iconY + iconSize + 15);
 
-        ctx.font = `${opts.fontSize! - 6}px "${opts.fontFamily}"`;
+        ctx.font = `${opts.fontSize - 6}px "${opts.fontFamily}"`;
         ctx.fillStyle = "#cccccc";
         ctx.fillText(character.nameJa, x, iconY + iconSize + 40);
       } catch {
         ctx.fillStyle = "#666666";
         ctx.fillRect(x - 40, y + 10, 80, 80);
 
-        ctx.fillStyle = opts.fontColor!;
-        ctx.font = `${opts.fontSize! - 4}px "${opts.fontFamily}"`;
+        ctx.fillStyle = opts.fontColor;
+        ctx.font = `${opts.fontSize - 4}px "${opts.fontFamily}"`;
         ctx.textAlign = "center";
         ctx.fillText(member.playerName, x, y + 105);
 
-        ctx.font = `${opts.fontSize! - 6}px "${opts.fontFamily}"`;
+        ctx.font = `${opts.fontSize - 6}px "${opts.fontFamily}"`;
         ctx.fillStyle = "#cccccc";
         ctx.fillText(character.nameJa, x, y + 130);
       }

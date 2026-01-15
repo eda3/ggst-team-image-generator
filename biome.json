@@ -39,13 +39,6 @@
     }
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      "dist",
-      "output",
-      "coverage",
-      "*.json",
-      "bun.lockb"
-    ]
+    "ignore": ["node_modules", "dist", "output", "coverage", "*.json", "bun.lockb"]
   }
 }

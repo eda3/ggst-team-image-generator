@@ -30,7 +30,7 @@ function getNextArg(args: string[], index: number, optionName: string): string {
 }
 
 function parsePositiveInt(value: string, optionName: string): number {
-  const parsed = parseInt(value, 10);
+  const parsed = Number.parseInt(value, 10);
   if (Number.isNaN(parsed)) {
     throw new ParseError(`${optionName} には数値を指定してください: "${value}"`);
   }

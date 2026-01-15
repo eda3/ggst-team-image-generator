@@ -16,10 +16,7 @@ export async function generateCommand(args: ParsedArgs): Promise<void> {
 
   try {
     const builder = new TeamBuilder();
-    const team = builder
-      .setTeamName(args.teamName)
-      .parseMembersString(args.members)
-      .build();
+    const team = builder.setTeamName(args.teamName).parseMembersString(args.members).build();
 
     const assetsPath = path.join(process.cwd(), "assets");
     const renderer = new ImageRenderer(assetsPath);

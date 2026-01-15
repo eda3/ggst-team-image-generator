@@ -9,7 +9,7 @@ export class TeamBuilderError extends Error {
 }
 
 export class TeamBuilder {
-  private teamName: string = "";
+  private teamName = "";
   private members: TeamMember[] = [];
 
   setTeamName(name: string): this {
@@ -31,9 +31,7 @@ export class TeamBuilder {
 
     const characterId = characterRegistry.resolveCharacterId(characterIdOrAlias);
     if (!characterId) {
-      throw new TeamBuilderError(
-        `キャラクター "${characterIdOrAlias}" が見つかりません`
-      );
+      throw new TeamBuilderError(`キャラクター "${characterIdOrAlias}" が見つかりません`);
     }
 
     this.members.push({
@@ -70,9 +68,7 @@ export class TeamBuilder {
     }
 
     if (this.members.length !== 3) {
-      throw new TeamBuilderError(
-        `チームメンバーは3人必要です（現在: ${this.members.length}人）`
-      );
+      throw new TeamBuilderError(`チームメンバーは3人必要です（現在: ${this.members.length}人）`);
     }
 
     const team: Team = {

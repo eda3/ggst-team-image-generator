@@ -48,57 +48,27 @@ describe("parseArgs", () => {
     });
 
     test("--team でチーム名を指定できる", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "--team",
-        "TestTeam",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "--team", "TestTeam"]);
       expect(args.teamName).toBe("TestTeam");
     });
 
     test("-m でメンバー情報を指定できる", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "-m",
-        "P1:sol,P2:ky,P3:may",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "-m", "P1:sol,P2:ky,P3:may"]);
       expect(args.members).toBe("P1:sol,P2:ky,P3:may");
     });
 
     test("--members でメンバー情報を指定できる", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "--members",
-        "P1:sol,P2:ky,P3:may",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "--members", "P1:sol,P2:ky,P3:may"]);
       expect(args.members).toBe("P1:sol,P2:ky,P3:may");
     });
 
     test("-o で出力ディレクトリを指定できる", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "-o",
-        "./custom-output",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "-o", "./custom-output"]);
       expect(args.output).toBe("./custom-output");
     });
 
     test("-l でレイアウトを指定できる (horizontal)", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "-l",
-        "horizontal",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "-l", "horizontal"]);
       expect(args.layout).toBe("horizontal");
     });
 
@@ -150,84 +120,66 @@ describe("parseArgs", () => {
 
   describe("エラーケース", () => {
     test("-t の後に値がないとエラー", () => {
-      expect(() => parseArgs(["node", "script", "generate", "-t"])).toThrow(
-        ParseError
-      );
+      expect(() => parseArgs(["node", "script", "generate", "-t"])).toThrow(ParseError);
       expect(() => parseArgs(["node", "script", "generate", "-t"])).toThrow(
         "--team オプションには値が必要です"
       );
     });
 
     test("-t の後に別のオプションがあるとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "-t", "-m"])
-      ).toThrow(ParseError);
-      expect(() =>
-        parseArgs(["node", "script", "generate", "-t", "-m"])
-      ).toThrow("--team オプションには値が必要です");
+      expect(() => parseArgs(["node", "script", "generate", "-t", "-m"])).toThrow(ParseError);
+      expect(() => parseArgs(["node", "script", "generate", "-t", "-m"])).toThrow(
+        "--team オプションには値が必要です"
+      );
     });
 
     test("-m の後に値がないとエラー", () => {
-      expect(() => parseArgs(["node", "script", "generate", "-m"])).toThrow(
-        ParseError
-      );
+      expect(() => parseArgs(["node", "script", "generate", "-m"])).toThrow(ParseError);
     });
 
     test("-o の後に値がないとエラー", () => {
-      expect(() => parseArgs(["node", "script", "generate", "-o"])).toThrow(
-        ParseError
-      );
+      expect(() => parseArgs(["node", "script", "generate", "-o"])).toThrow(ParseError);
     });
 
     test("-l の後に値がないとエラー", () => {
-      expect(() => parseArgs(["node", "script", "generate", "-l"])).toThrow(
+      expect(() => parseArgs(["node", "script", "generate", "-l"])).toThrow(ParseError);
+    });
+
+    test("-l に不正な値を指定するとエラー", () => {
+      expect(() => parseArgs(["node", "script", "generate", "-l", "invalid"])).toThrow(ParseError);
+      expect(() => parseArgs(["node", "script", "generate", "-l", "invalid"])).toThrow(
+        '"horizontal" または "vertical" を指定してください'
+      );
+    });
+
+    test("--width の後に値がないとエラー", () => {
+      expect(() => parseArgs(["node", "script", "generate", "--width"])).toThrow(ParseError);
+    });
+
+    test("--width に数値以外を指定するとエラー", () => {
+      expect(() => parseArgs(["node", "script", "generate", "--width", "abc"])).toThrow(ParseError);
+      expect(() => parseArgs(["node", "script", "generate", "--width", "abc"])).toThrow(
+        "--width には数値を指定してください"
+      );
+    });
+
+    test("--width に0を指定するとエラー", () => {
+      expect(() => parseArgs(["node", "script", "generate", "--width", "0"])).toThrow(ParseError);
+      expect(() => parseArgs(["node", "script", "generate", "--width", "0"])).toThrow(
+        "--width には正の数値を指定してください"
+      );
+    });
+
+    test("--width に負の数を指定するとエラー", () => {
+      expect(() => parseArgs(["node", "script", "generate", "--width", "-100"])).toThrow(
         ParseError
       );
     });
 
-    test("-l に不正な値を指定するとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "-l", "invalid"])
-      ).toThrow(ParseError);
-      expect(() =>
-        parseArgs(["node", "script", "generate", "-l", "invalid"])
-      ).toThrow('"horizontal" または "vertical" を指定してください');
-    });
-
-    test("--width の後に値がないとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--width"])
-      ).toThrow(ParseError);
-    });
-
-    test("--width に数値以外を指定するとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--width", "abc"])
-      ).toThrow(ParseError);
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--width", "abc"])
-      ).toThrow("--width には数値を指定してください");
-    });
-
-    test("--width に0を指定するとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--width", "0"])
-      ).toThrow(ParseError);
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--width", "0"])
-      ).toThrow("--width には正の数値を指定してください");
-    });
-
-    test("--width に負の数を指定するとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--width", "-100"])
-      ).toThrow(ParseError);
-    });
-
     test("--height に数値以外を指定するとエラー", () => {
-      expect(() =>
-        parseArgs(["node", "script", "generate", "--height", "abc"])
-      ).toThrow(ParseError);
+      expect(() => parseArgs(["node", "script", "generate", "--height", "abc"])).toThrow(
+        ParseError
+      );
     });
   });
 
@@ -238,36 +190,17 @@ describe("parseArgs", () => {
     });
 
     test("不明なオプションは無視される", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "--unknown",
-        "-t",
-        "Team",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "--unknown", "-t", "Team"]);
       expect(args.teamName).toBe("Team");
     });
 
     test("日本語のチーム名を指定できる", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "-t",
-        "日本語チーム名",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "-t", "日本語チーム名"]);
       expect(args.teamName).toBe("日本語チーム名");
     });
 
     test("スペースを含むチーム名を指定できる", () => {
-      const args = parseArgs([
-        "node",
-        "script",
-        "generate",
-        "-t",
-        "Team With Spaces",
-      ]);
+      const args = parseArgs(["node", "script", "generate", "-t", "Team With Spaces"]);
       expect(args.teamName).toBe("Team With Spaces");
     });
   });

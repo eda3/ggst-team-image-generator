@@ -89,10 +89,7 @@ describe("TeamBuilder", () => {
   describe("エラーケース", () => {
     test("チーム名なしでビルドするとエラー", () => {
       const builder = new TeamBuilder();
-      builder
-        .addMember("P1", "sol")
-        .addMember("P2", "ky")
-        .addMember("P3", "may");
+      builder.addMember("P1", "sol").addMember("P2", "ky").addMember("P3", "may");
 
       expect(() => builder.build()).toThrow(TeamBuilderError);
       expect(() => builder.build()).toThrow("チーム名が設定されていません");
@@ -121,26 +118,22 @@ describe("TeamBuilder", () => {
         .addMember("P3", "may");
 
       expect(() => builder.addMember("P4", "axl")).toThrow(TeamBuilderError);
-      expect(() => builder.addMember("P4", "axl")).toThrow(
-        "チームメンバーは3人までです"
-      );
+      expect(() => builder.addMember("P4", "axl")).toThrow("チームメンバーは3人までです");
     });
 
     test("存在しないキャラクターを指定するとエラー", () => {
       const builder = new TeamBuilder();
-      expect(() =>
-        builder.setTeamName("無効チーム").addMember("P1", "invalid_character")
-      ).toThrow(TeamBuilderError);
-      expect(() =>
-        builder.setTeamName("無効チーム").addMember("P1", "invalid_character")
-      ).toThrow('キャラクター "invalid_character" が見つかりません');
+      expect(() => builder.setTeamName("無効チーム").addMember("P1", "invalid_character")).toThrow(
+        TeamBuilderError
+      );
+      expect(() => builder.setTeamName("無効チーム").addMember("P1", "invalid_character")).toThrow(
+        'キャラクター "invalid_character" が見つかりません'
+      );
     });
 
     test("空のプレイヤー名はエラー", () => {
       const builder = new TeamBuilder();
-      expect(() => builder.setTeamName("テスト").addMember("", "sol")).toThrow(
-        TeamBuilderError
-      );
+      expect(() => builder.setTeamName("テスト").addMember("", "sol")).toThrow(TeamBuilderError);
       expect(() => builder.setTeamName("テスト").addMember("", "sol")).toThrow(
         "プレイヤー名は必須です"
       );
@@ -148,12 +141,12 @@ describe("TeamBuilder", () => {
 
     test("不正なメンバー形式はエラー", () => {
       const builder = new TeamBuilder();
-      expect(() =>
-        builder.setTeamName("テスト").parseMembersString("invalid_format")
-      ).toThrow(TeamBuilderError);
-      expect(() =>
-        builder.setTeamName("テスト").parseMembersString("invalid_format")
-      ).toThrow("メンバー形式が不正です");
+      expect(() => builder.setTeamName("テスト").parseMembersString("invalid_format")).toThrow(
+        TeamBuilderError
+      );
+      expect(() => builder.setTeamName("テスト").parseMembersString("invalid_format")).toThrow(
+        "メンバー形式が不正です"
+      );
     });
   });
 
