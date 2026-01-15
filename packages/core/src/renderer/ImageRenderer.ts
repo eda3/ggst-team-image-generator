@@ -13,7 +13,14 @@ export class ImageRenderer {
   }
 
   async render(team: Team, options: RenderOptionsInput = {}): Promise<RenderResult> {
-    const opts: RenderOptions = { ...DEFAULT_RENDER_OPTIONS, ...options };
+    // undefinedの値を除去してからマージする
+    const cleanedOptions: Partial<RenderOptions> = {};
+    for (const key of Object.keys(options) as (keyof RenderOptionsInput)[]) {
+      if (options[key] !== undefined) {
+        (cleanedOptions as Record<string, unknown>)[key] = options[key];
+      }
+    }
+    const opts: RenderOptions = { ...DEFAULT_RENDER_OPTIONS, ...cleanedOptions };
 
     const { width, height } = opts;
 
