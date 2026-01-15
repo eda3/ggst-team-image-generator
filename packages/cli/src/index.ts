@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { generateCommand, listCommand } from "./commands";
-import { parseArgs } from "./parser";
+import { ParseError, parseArgs } from "./parser";
 
 const VERSION = "1.0.0";
 
@@ -68,6 +68,11 @@ async function main(): Promise<void> {
 }
 
 main().catch((error) => {
-  console.error("予期しないエラーが発生しました:", error);
+  if (error instanceof ParseError) {
+    console.error(`引数エラー: ${error.message}`);
+    console.error("ヘルプを表示するには --help を使用してください");
+  } else {
+    console.error("予期しないエラーが発生しました:", error);
+  }
   process.exit(1);
 });
