@@ -1,0 +1,19 @@
+# bunfig.toml - Bun設定ファイル
+
+[install]
+# 依存関係のインストール設定
+peer = false
+optional = true
+
+[install.lockfile]
+# lockfileの設定
+save = true
+
+[test]
+# テスト設定
+coverage = true
+coverageDir = "coverage"
+
+[run]
+# 実行時設定
+bun = true

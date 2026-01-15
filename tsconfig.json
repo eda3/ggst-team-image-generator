@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ESNext"],
+    "types": ["bun-types"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ggst-team/core": ["packages/core/src"],
+      "@ggst-team/core/*": ["packages/core/src/*"],
+      "@ggst-team/cli": ["packages/cli/src"],
+      "@ggst-team/cli/*": ["packages/cli/src/*"]
+    }
+  },
+  "include": ["packages/*/src/**/*", "tests/**/*"],
+  "exclude": ["node_modules", "dist", "output"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@ggst-team/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "ggst-team": "src/index.ts"
+  },
+  "dependencies": {
+    "@ggst-team/core": "workspace:*"
+  }
+}

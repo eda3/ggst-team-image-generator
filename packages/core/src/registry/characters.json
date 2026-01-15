@@ -1,0 +1,260 @@
+{
+  "characters": [
+    {
+      "id": "sol",
+      "name": "Sol Badguy",
+      "nameJa": "ソル＝バッドガイ",
+      "aliases": ["sol", "ソル"],
+      "iconPath": "assets/characters/icons/sol.png",
+      "portraitPath": "assets/characters/portraits/sol.png"
+    },
+    {
+      "id": "ky",
+      "name": "Ky Kiske",
+      "nameJa": "カイ＝キスク",
+      "aliases": ["ky", "カイ"],
+      "iconPath": "assets/characters/icons/ky.png",
+      "portraitPath": "assets/characters/portraits/ky.png"
+    },
+    {
+      "id": "may",
+      "name": "May",
+      "nameJa": "メイ",
+      "aliases": ["may", "メイ"],
+      "iconPath": "assets/characters/icons/may.png",
+      "portraitPath": "assets/characters/portraits/may.png"
+    },
+    {
+      "id": "axl",
+      "name": "Axl Low",
+      "nameJa": "アクセル＝ロウ",
+      "aliases": ["axl", "アクセル"],
+      "iconPath": "assets/characters/icons/axl.png",
+      "portraitPath": "assets/characters/portraits/axl.png"
+    },
+    {
+      "id": "chipp",
+      "name": "Chipp Zanuff",
+      "nameJa": "チップ＝ザナフ",
+      "aliases": ["chipp", "チップ"],
+      "iconPath": "assets/characters/icons/chipp.png",
+      "portraitPath": "assets/characters/portraits/chipp.png"
+    },
+    {
+      "id": "potemkin",
+      "name": "Potemkin",
+      "nameJa": "ポチョムキン",
+      "aliases": ["pot", "potemkin", "ポチョ"],
+      "iconPath": "assets/characters/icons/potemkin.png",
+      "portraitPath": "assets/characters/portraits/potemkin.png"
+    },
+    {
+      "id": "faust",
+      "name": "Faust",
+      "nameJa": "ファウスト",
+      "aliases": ["faust", "ファウスト"],
+      "iconPath": "assets/characters/icons/faust.png",
+      "portraitPath": "assets/characters/portraits/faust.png"
+    },
+    {
+      "id": "millia",
+      "name": "Millia Rage",
+      "nameJa": "ミリア＝レイジ",
+      "aliases": ["millia", "ミリア"],
+      "iconPath": "assets/characters/icons/millia.png",
+      "portraitPath": "assets/characters/portraits/millia.png"
+    },
+    {
+      "id": "zato",
+      "name": "Zato-1",
+      "nameJa": "ザトー＝ONE",
+      "aliases": ["zato", "ザトー"],
+      "iconPath": "assets/characters/icons/zato.png",
+      "portraitPath": "assets/characters/portraits/zato.png"
+    },
+    {
+      "id": "ramlethal",
+      "name": "Ramlethal Valentine",
+      "nameJa": "ラムレザル＝ヴァレンタイン",
+      "aliases": ["ram", "ramlethal", "ラム"],
+      "iconPath": "assets/characters/icons/ramlethal.png",
+      "portraitPath": "assets/characters/portraits/ramlethal.png"
+    },
+    {
+      "id": "leo",
+      "name": "Leo Whitefang",
+      "nameJa": "レオ＝ホワイトファング",
+      "aliases": ["leo", "レオ"],
+      "iconPath": "assets/characters/icons/leo.png",
+      "portraitPath": "assets/characters/portraits/leo.png"
+    },
+    {
+      "id": "nagoriyuki",
+      "name": "Nagoriyuki",
+      "nameJa": "名残雪",
+      "aliases": ["nago", "nagoriyuki", "ナゴ"],
+      "iconPath": "assets/characters/icons/nagoriyuki.png",
+      "portraitPath": "assets/characters/portraits/nagoriyuki.png"
+    },
+    {
+      "id": "giovanna",
+      "name": "Giovanna",
+      "nameJa": "ジオヴァーナ",
+      "aliases": ["gio", "giovanna", "ジオ"],
+      "iconPath": "assets/characters/icons/giovanna.png",
+      "portraitPath": "assets/characters/portraits/giovanna.png"
+    },
+    {
+      "id": "anji",
+      "name": "Anji Mito",
+      "nameJa": "御津闘慈",
+      "aliases": ["anji", "アンジ"],
+      "iconPath": "assets/characters/icons/anji.png",
+      "portraitPath": "assets/characters/portraits/anji.png"
+    },
+    {
+      "id": "ino",
+      "name": "I-No",
+      "nameJa": "イノ",
+      "aliases": ["ino", "イノ"],
+      "iconPath": "assets/characters/icons/ino.png",
+      "portraitPath": "assets/characters/portraits/ino.png"
+    },
+    {
+      "id": "goldlewis",
+      "name": "Goldlewis Dickinson",
+      "nameJa": "ゴールドルイス＝ディキンソン",
+      "aliases": ["goldlewis", "ゴールドルイス", "金"],
+      "iconPath": "assets/characters/icons/goldlewis.png",
+      "portraitPath": "assets/characters/portraits/goldlewis.png"
+    },
+    {
+      "id": "jacko",
+      "name": "Jack-O' Valentine",
+      "nameJa": "ジャック・オー",
+      "aliases": ["jacko", "ジャック・オー", "ジャッコ"],
+      "iconPath": "assets/characters/icons/jacko.png",
+      "portraitPath": "assets/characters/portraits/jacko.png"
+    },
+    {
+      "id": "happychaos",
+      "name": "Happy Chaos",
+      "nameJa": "ハッピー・ケイオス",
+      "aliases": ["happychaos", "hc", "ハッピー"],
+      "iconPath": "assets/characters/icons/happychaos.png",
+      "portraitPath": "assets/characters/portraits/happychaos.png"
+    },
+    {
+      "id": "baiken",
+      "name": "Baiken",
+      "nameJa": "梅喧",
+      "aliases": ["baiken", "梅喧", "バイケン"],
+      "iconPath": "assets/characters/icons/baiken.png",
+      "portraitPath": "assets/characters/portraits/baiken.png"
+    },
+    {
+      "id": "testament",
+      "name": "Testament",
+      "nameJa": "テスタメント",
+      "aliases": ["testament", "テスタメント"],
+      "iconPath": "assets/characters/icons/testament.png",
+      "portraitPath": "assets/characters/portraits/testament.png"
+    },
+    {
+      "id": "bridget",
+      "name": "Bridget",
+      "nameJa": "ブリジット",
+      "aliases": ["bridget", "ブリジット"],
+      "iconPath": "assets/characters/icons/bridget.png",
+      "portraitPath": "assets/characters/portraits/bridget.png"
+    },
+    {
+      "id": "sin",
+      "name": "Sin Kiske",
+      "nameJa": "シン＝キスク",
+      "aliases": ["sin", "シン"],
+      "iconPath": "assets/characters/icons/sin.png",
+      "portraitPath": "assets/characters/portraits/sin.png"
+    },
+    {
+      "id": "bedman",
+      "name": "Bedman?",
+      "nameJa": "ベッドマン？",
+      "aliases": ["bedman", "ベッドマン"],
+      "iconPath": "assets/characters/icons/bedman.png",
+      "portraitPath": "assets/characters/portraits/bedman.png"
+    },
+    {
+      "id": "asuka",
+      "name": "Asuka R#",
+      "nameJa": "飛鳥＝R＃",
+      "aliases": ["asuka", "飛鳥", "アスカ"],
+      "iconPath": "assets/characters/icons/asuka.png",
+      "portraitPath": "assets/characters/portraits/asuka.png"
+    },
+    {
+      "id": "johnny",
+      "name": "Johnny",
+      "nameJa": "ジョニー",
+      "aliases": ["johnny", "ジョニー"],
+      "iconPath": "assets/characters/icons/johnny.png",
+      "portraitPath": "assets/characters/portraits/johnny.png"
+    },
+    {
+      "id": "elphelt",
+      "name": "Elphelt Valentine",
+      "nameJa": "エルフェルト＝ヴァレンタイン",
+      "aliases": ["elphelt", "エルフェルト"],
+      "iconPath": "assets/characters/icons/elphelt.png",
+      "portraitPath": "assets/characters/portraits/elphelt.png"
+    },
+    {
+      "id": "aba",
+      "name": "A.B.A",
+      "nameJa": "アバ",
+      "aliases": ["aba", "アバ"],
+      "iconPath": "assets/characters/icons/aba.png",
+      "portraitPath": "assets/characters/portraits/aba.png"
+    },
+    {
+      "id": "slayer",
+      "name": "Slayer",
+      "nameJa": "スレイヤー",
+      "aliases": ["slayer", "スレイヤー"],
+      "iconPath": "assets/characters/icons/slayer.png",
+      "portraitPath": "assets/characters/portraits/slayer.png"
+    },
+    {
+      "id": "dizzy",
+      "name": "Dizzy",
+      "nameJa": "ディズィー",
+      "aliases": ["dizzy", "ディズィー"],
+      "iconPath": "assets/characters/icons/dizzy.png",
+      "portraitPath": "assets/characters/portraits/dizzy.png"
+    },
+    {
+      "id": "venom",
+      "name": "Venom",
+      "nameJa": "ヴェノム",
+      "aliases": ["venom", "ヴェノム"],
+      "iconPath": "assets/characters/icons/venom.png",
+      "portraitPath": "assets/characters/portraits/venom.png"
+    },
+    {
+      "id": "unika",
+      "name": "Unika",
+      "nameJa": "ユニカ",
+      "aliases": ["unika", "ユニカ"],
+      "iconPath": "assets/characters/icons/unika.png",
+      "portraitPath": "assets/characters/portraits/unika.png"
+    },
+    {
+      "id": "queen_dizzy",
+      "name": "Queen Dizzy",
+      "nameJa": "クイーン・ディズィー",
+      "aliases": ["queen_dizzy", "クイーンディズィー", "qd"],
+      "iconPath": "assets/characters/icons/queen_dizzy.png",
+      "portraitPath": "assets/characters/portraits/queen_dizzy.png"
+    }
+  ]
+}
