@@ -4,6 +4,8 @@ import path from "node:path";
 
 const CLI_PATH = path.join(process.cwd(), "packages/cli/src/index.ts");
 const TEST_OUTPUT_DIR = path.join(process.cwd(), "output/test-generate");
+// テスト実行中のBunのパスを取得（環境によってPATHにbunがない場合に対応）
+const BUN_PATH = process.argv[0];
 
 // PNGマジックナンバー
 const PNG_MAGIC = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
@@ -27,7 +29,7 @@ describe("generateコマンド", () => {
     test("有効な引数で画像ファイルが生成される", async () => {
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -63,7 +65,7 @@ describe("generateコマンド", () => {
 
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -90,7 +92,7 @@ describe("generateコマンド", () => {
 
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -125,7 +127,7 @@ describe("generateコマンド", () => {
 
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -153,7 +155,7 @@ describe("generateコマンド", () => {
 
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -181,7 +183,7 @@ describe("generateコマンド", () => {
     test("チーム名がない場合にエラーメッセージが表示される", async () => {
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -202,7 +204,7 @@ describe("generateコマンド", () => {
     test("メンバー情報がない場合にエラーメッセージが表示される", async () => {
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -223,7 +225,7 @@ describe("generateコマンド", () => {
     test("無効なキャラクターIDでエラーメッセージが表示される", async () => {
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",
@@ -246,7 +248,7 @@ describe("generateコマンド", () => {
     test("exit code 1で終了する", async () => {
       const result = await Bun.spawn({
         cmd: [
-          "bun",
+          BUN_PATH,
           "run",
           CLI_PATH,
           "generate",

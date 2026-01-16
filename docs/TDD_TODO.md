@@ -215,14 +215,14 @@
 **ファイル**: `tests/cli/integration.test.ts`
 
 #### E2Eテスト 🔴
-- [ ] `bun run dev generate` で画像生成が成功する
-- [ ] `bun run dev list` でキャラクター一覧が表示される
-- [ ] `bun run dev --help` でヘルプが表示される
-- [ ] `bun run dev --version` でバージョンが表示される
+- [x] `bun run dev generate` で画像生成が成功する
+- [x] `bun run dev list` でキャラクター一覧が表示される
+- [x] `bun run dev --help` でヘルプが表示される
+- [x] `bun run dev --version` でバージョンが表示される
 
 #### エラーハンドリング 🔴
-- [ ] 不正な引数でエラー終了する（exit code 1）
-- [ ] ParseErrorが適切にハンドリングされる
+- [x] 不正な引数でエラー終了する（exit code 1）
+- [x] ParseErrorが適切にハンドリングされる
 
 ---
 
@@ -319,7 +319,7 @@
 4. ~~ImageRenderer テスト~~ ✅ 完了
 5. ~~generateコマンド テスト~~ ✅ 完了
 6. ~~listコマンド テスト~~ ✅ 完了
-7. **CLI統合テスト** ← 次に実装
+7. ~~CLI統合テスト~~ ✅ 完了
 
 ### Phase 2: 拡張機能
 
@@ -367,7 +367,8 @@ bun test --verbose
 | ImageRenderer | 100% | **80%以上** ✅ |
 | generateコマンド | 99.5% | 80%以上 ✅ |
 | listコマンド | 100% | 80%以上 ✅ |
-| **全体** | **99.97%** | **90%以上** ✅ |
+| CLI統合テスト | 99.8% | 80%以上 ✅ |
+| **全体** | **99.96%** | **90%以上** ✅ |
 
 ---
 
@@ -406,3 +407,4 @@ test("horizontalレイアウトで画像を生成できる", async () => {
 | 2026-01-16 | ImageRenderer, RenderOptionsテスト完了（26テスト追加、計90テスト） |
 | 2026-01-16 | generateコマンドテスト完了（9テスト追加、計99テスト） |
 | 2026-01-16 | listコマンドテスト完了（7テスト追加、計106テスト） |
+| 2026-01-16 | CLI統合テスト完了（19テスト追加、計125テスト）- Phase 1完了 |

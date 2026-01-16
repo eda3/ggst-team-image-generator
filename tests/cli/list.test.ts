@@ -2,12 +2,14 @@ import { describe, expect, test } from "bun:test";
 import path from "node:path";
 
 const CLI_PATH = path.join(process.cwd(), "packages/cli/src/index.ts");
+// テスト実行中のBunのパスを取得（環境によってPATHにbunがない場合に対応）
+const BUN_PATH = process.argv[0];
 
 describe("listコマンド", () => {
   describe("正常系", () => {
     test("全キャラクターが表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
@@ -24,7 +26,7 @@ describe("listコマンド", () => {
 
     test("キャラクターIDが表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
@@ -45,7 +47,7 @@ describe("listコマンド", () => {
 
     test("キャラクター名（日本語）が表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
@@ -61,7 +63,7 @@ describe("listコマンド", () => {
 
     test("エイリアスが表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
@@ -75,7 +77,7 @@ describe("listコマンド", () => {
 
     test("合計数が表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
@@ -92,7 +94,7 @@ describe("listコマンド", () => {
 
     test("ヘッダー行が表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
@@ -109,7 +111,7 @@ describe("listコマンド", () => {
 
     test("区切り線が表示される", async () => {
       const result = await Bun.spawn({
-        cmd: ["bun", "run", CLI_PATH, "list"],
+        cmd: [BUN_PATH, "run", CLI_PATH, "list"],
         stdout: "pipe",
         stderr: "pipe",
       });
