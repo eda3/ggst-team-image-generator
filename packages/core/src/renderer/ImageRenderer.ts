@@ -105,7 +105,7 @@ export class ImageRenderer {
     ctx.textBaseline = "bottom";
     ctx.strokeStyle = "#000000";
     ctx.lineWidth = 5;
-    const teamNameY = canvasHeight * 0.92;
+    const teamNameY = canvasHeight * 0.92 - 40;
     ctx.strokeText(teamName, canvasWidth / 2, teamNameY);
     ctx.fillText(teamName, canvasWidth / 2, teamNameY);
   }
