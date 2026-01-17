@@ -28,10 +28,10 @@ export interface RenderResult {
 
 export const DEFAULT_RENDER_OPTIONS: RenderOptions = {
   layout: "horizontal",
-  width: 800,
-  height: 300,
+  width: 1920,
+  height: 1080,
   backgroundColor: "#1a1a2e",
   fontFamily: "Noto Sans JP",
-  fontSize: 24,
+  fontSize: 48,
   fontColor: "#ffffff",
 };

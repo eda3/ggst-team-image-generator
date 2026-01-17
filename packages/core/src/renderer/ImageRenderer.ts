@@ -30,7 +30,7 @@ export class ImageRenderer {
     ctx.fillStyle = opts.backgroundColor;
     ctx.fillRect(0, 0, width, height);
 
-    this.drawTeamName(ctx, team.name, width, opts);
+    this.drawTeamName(ctx, team.name, width, height, opts);
     await this.drawMembers(ctx, team, width, height, opts);
 
     const buffer = canvas.toBuffer("image/png");
@@ -46,13 +46,15 @@ export class ImageRenderer {
     ctx: SKRSContext2D,
     teamName: string,
     canvasWidth: number,
+    canvasHeight: number,
     opts: RenderOptions
   ): void {
     ctx.fillStyle = opts.fontColor;
     ctx.font = `bold ${opts.fontSize + 8}px "${opts.fontFamily}"`;
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
-    ctx.fillText(teamName, canvasWidth / 2, 20);
+    const teamNameY = canvasHeight * 0.08;
+    ctx.fillText(teamName, canvasWidth / 2, teamNameY);
   }
 
   private async drawMembers(
@@ -65,9 +67,12 @@ export class ImageRenderer {
     const memberCount = team.members.length;
     const isHorizontal = opts.layout === "horizontal";
 
-    const startY = 70;
-    const availableHeight = canvasHeight - startY - 20;
-    const availableWidth = canvasWidth - 40;
+    const teamNameHeight = (opts.fontSize + 8) * 1.5;
+    const startY = canvasHeight * 0.08 + teamNameHeight + 40;
+    const bottomPadding = canvasHeight * 0.1;
+    const availableHeight = canvasHeight - startY - bottomPadding;
+    const sidePadding = canvasWidth * 0.05;
+    const availableWidth = canvasWidth - sidePadding * 2;
 
     for (let i = 0; i < memberCount; i++) {
       const member = team.members[i];
@@ -83,7 +88,7 @@ export class ImageRenderer {
       if (isHorizontal) {
         cellWidth = availableWidth / memberCount;
         cellHeight = availableHeight;
-        x = 20 + i * cellWidth + cellWidth / 2;
+        x = sidePadding + i * cellWidth + cellWidth / 2;
         y = startY;
       } else {
         cellWidth = availableWidth;
@@ -96,9 +101,9 @@ export class ImageRenderer {
         const iconPath = path.join(this.assetsBasePath, character.iconPath);
         const image = await loadImage(iconPath);
 
-        const iconSize = Math.min(cellWidth * 0.6, cellHeight * 0.5, 100);
+        const iconSize = Math.min(cellWidth * 0.6, cellHeight * 0.6, 400);
         const iconX = x - iconSize / 2;
-        const iconY = y + 10;
+        const iconY = y + (cellHeight - iconSize) * 0.3;
 
         ctx.drawImage(image, iconX, iconY, iconSize, iconSize);
 
@@ -106,10 +111,6 @@ export class ImageRenderer {
         ctx.font = `${opts.fontSize - 4}px "${opts.fontFamily}"`;
         ctx.textAlign = "center";
         ctx.fillText(member.playerName, x, iconY + iconSize + 15);
-
-        ctx.font = `${opts.fontSize - 6}px "${opts.fontFamily}"`;
-        ctx.fillStyle = "#cccccc";
-        ctx.fillText(character.nameJa, x, iconY + iconSize + 40);
       } catch {
         ctx.fillStyle = "#666666";
         ctx.fillRect(x - 40, y + 10, 80, 80);
@@ -118,10 +119,6 @@ export class ImageRenderer {
         ctx.font = `${opts.fontSize - 4}px "${opts.fontFamily}"`;
         ctx.textAlign = "center";
         ctx.fillText(member.playerName, x, y + 105);
-
-        ctx.font = `${opts.fontSize - 6}px "${opts.fontFamily}"`;
-        ctx.fillStyle = "#cccccc";
-        ctx.fillText(character.nameJa, x, y + 130);
       }
     }
   }
