@@ -7,8 +7,14 @@ node_modules/
 # Build output
 dist/
 
-# Assets
-assets/
+# Assets - exclude image files but keep directory structure
+assets/**/*.png
+assets/**/*.jpg
+assets/**/*.jpeg
+assets/**/*.gif
+assets/**/*.webp
+assets/**/*.svg
+assets/**/*.bmp
 
 # Generated images
 output/
