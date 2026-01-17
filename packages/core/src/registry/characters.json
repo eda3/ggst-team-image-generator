@@ -4,7 +4,7 @@
       "id": "sol",
       "name": "Sol Badguy",
       "nameJa": "ソル＝バッドガイ",
-      "aliases": ["sol", "ソル"],
+      "aliases": ["so","sol", "ソル"],
       "iconPath": "icons/01_chibi_sol.png",
       "portraitPath": "assets/characters/portraits/sol.png"
     },
@@ -20,7 +20,7 @@
       "id": "may",
       "name": "May",
       "nameJa": "メイ",
-      "aliases": ["may", "メイ"],
+      "aliases": ["ma","may", "メイ"],
       "iconPath": "icons/03_chibi_may.png",
       "portraitPath": "assets/characters/portraits/may.png"
     },
@@ -28,7 +28,7 @@
       "id": "axl",
       "name": "Axl Low",
       "nameJa": "アクセル＝ロウ",
-      "aliases": ["axl", "アクセル"],
+      "aliases": ["ax","axl", "アクセル"],
       "iconPath": "icons/04_chibi_axl.png",
       "portraitPath": "assets/characters/portraits/axl.png"
     },
@@ -36,7 +36,7 @@
       "id": "chipp",
       "name": "Chipp Zanuff",
       "nameJa": "チップ＝ザナフ",
-      "aliases": ["chipp", "チップ"],
+      "aliases": ["ch","chipp", "チップ"],
       "iconPath": "icons/05_chibi_chp.png",
       "portraitPath": "assets/characters/portraits/chipp.png"
     },
@@ -44,7 +44,7 @@
       "id": "potemkin",
       "name": "Potemkin",
       "nameJa": "ポチョムキン",
-      "aliases": ["pot", "potemkin", "ポチョ"],
+      "aliases": ["po","pot", "potemkin", "ポチョ"],
       "iconPath": "icons/06_chibi_pot.png",
       "portraitPath": "assets/characters/portraits/potemkin.png"
     },
@@ -52,7 +52,7 @@
       "id": "faust",
       "name": "Faust",
       "nameJa": "ファウスト",
-      "aliases": ["faust", "ファウスト"],
+      "aliases": ["fa","faust", "ファウスト"],
       "iconPath": "icons/07_chibi_fau.png",
       "portraitPath": "assets/characters/portraits/faust.png"
     },
@@ -60,7 +60,7 @@
       "id": "millia",
       "name": "Millia Rage",
       "nameJa": "ミリア＝レイジ",
-      "aliases": ["millia", "ミリア"],
+      "aliases": ["mi","millia", "ミリア"],
       "iconPath": "icons/08_chibi_mll.png",
       "portraitPath": "assets/characters/portraits/millia.png"
     },
@@ -68,7 +68,7 @@
       "id": "zato",
       "name": "Zato-1",
       "nameJa": "ザトー＝ONE",
-      "aliases": ["zato", "ザトー"],
+      "aliases": ["za","zato", "ザトー"],
       "iconPath": "icons/09_chibi_zat.png",
       "portraitPath": "assets/characters/portraits/zato.png"
     },
@@ -76,7 +76,7 @@
       "id": "ramlethal",
       "name": "Ramlethal Valentine",
       "nameJa": "ラムレザル＝ヴァレンタイン",
-      "aliases": ["ram", "ramlethal", "ラム"],
+      "aliases": ["ra","ram", "ramlethal", "ラム"],
       "iconPath": "icons/10_chibi_ram.png",
       "portraitPath": "assets/characters/portraits/ramlethal.png"
     },
@@ -84,7 +84,7 @@
       "id": "leo",
       "name": "Leo Whitefang",
       "nameJa": "レオ＝ホワイトファング",
-      "aliases": ["leo", "レオ"],
+      "aliases": ["le","leo", "レオ"],
       "iconPath": "icons/11_chibi_leo.png",
       "portraitPath": "assets/characters/portraits/leo.png"
     },
@@ -92,7 +92,7 @@
       "id": "nagoriyuki",
       "name": "Nagoriyuki",
       "nameJa": "名残雪",
-      "aliases": ["nago", "nagoriyuki", "ナゴ"],
+      "aliases": ["na","nago", "nagoriyuki", "ナゴ"],
       "iconPath": "icons/12_chibi_nag_b.png",
       "portraitPath": "assets/characters/portraits/nagoriyuki.png"
     },
@@ -100,7 +100,7 @@
       "id": "giovanna",
       "name": "Giovanna",
       "nameJa": "ジオヴァーナ",
-      "aliases": ["gio", "giovanna", "ジオ"],
+      "aliases": ["gi","gio", "giovanna", "ジオ"],
       "iconPath": "icons/13_chibi_gio.png",
       "portraitPath": "assets/characters/portraits/giovanna.png"
     },
@@ -108,7 +108,7 @@
       "id": "anji",
       "name": "Anji Mito",
       "nameJa": "御津闘慈",
-      "aliases": ["anji", "アンジ"],
+      "aliases": ["an","anji", "アンジ"],
       "iconPath": "icons/14_chibi_anj.png",
       "portraitPath": "assets/characters/portraits/anji.png"
     },
@@ -116,7 +116,7 @@
       "id": "ino",
       "name": "I-No",
       "nameJa": "イノ",
-      "aliases": ["ino", "イノ"],
+      "aliases": ["in","ino", "イノ"],
       "iconPath": "icons/15_chibi_ino.png",
       "portraitPath": "assets/characters/portraits/ino.png"
     },
@@ -124,7 +124,7 @@
       "id": "goldlewis",
       "name": "Goldlewis Dickinson",
       "nameJa": "ゴールドルイス＝ディキンソン",
-      "aliases": ["goldlewis", "ゴールドルイス", "金"],
+      "aliases": ["go","goldlewis", "ゴールドルイス", "金"],
       "iconPath": "icons/16_chibi_gld.png",
       "portraitPath": "assets/characters/portraits/goldlewis.png"
     },
@@ -132,7 +132,7 @@
       "id": "jacko",
       "name": "Jack-O' Valentine",
       "nameJa": "ジャック・オー",
-      "aliases": ["jacko", "ジャック・オー", "ジャッコ"],
+      "aliases": ["jc","jacko", "ジャック・オー", "ジャッコ"],
       "iconPath": "icons/17_chibi_jko_a.png",
       "portraitPath": "assets/characters/portraits/jacko.png"
     },
@@ -140,7 +140,7 @@
       "id": "happychaos",
       "name": "Happy Chaos",
       "nameJa": "ハッピー・ケイオス",
-      "aliases": ["happychaos", "hc", "ハッピー"],
+      "aliases": ["ha","happychaos", "hc", "ハッピー"],
       "iconPath": "icons/18_chibi_cos.png",
       "portraitPath": "assets/characters/portraits/happychaos.png"
     },
@@ -148,7 +148,7 @@
       "id": "baiken",
       "name": "Baiken",
       "nameJa": "梅喧",
-      "aliases": ["baiken", "梅喧", "バイケン"],
+      "aliases": ["ba","baiken", "梅喧", "バイケン"],
       "iconPath": "icons/19_chibi_bkn.png",
       "portraitPath": "assets/characters/portraits/baiken.png"
     },
@@ -156,7 +156,7 @@
       "id": "testament",
       "name": "Testament",
       "nameJa": "テスタメント",
-      "aliases": ["testament", "テスタメント"],
+      "aliases": ["te","testament", "テスタメント"],
       "iconPath": "icons/20_chibi_tst.png",
       "portraitPath": "assets/characters/portraits/testament.png"
     },
@@ -164,7 +164,7 @@
       "id": "bridget",
       "name": "Bridget",
       "nameJa": "ブリジット",
-      "aliases": ["bridget", "ブリジット"],
+      "aliases": ["br","bridget", "ブリジット"],
       "iconPath": "icons/21_chibi_bgt.png",
       "portraitPath": "assets/characters/portraits/bridget.png"
     },
@@ -172,7 +172,7 @@
       "id": "sin",
       "name": "Sin Kiske",
       "nameJa": "シン＝キスク",
-      "aliases": ["sin", "シン"],
+      "aliases": ["si","sin", "シン"],
       "iconPath": "icons/22_chibi_sin.png",
       "portraitPath": "assets/characters/portraits/sin.png"
     },
@@ -180,7 +180,7 @@
       "id": "bedman",
       "name": "Bedman?",
       "nameJa": "ベッドマン？",
-      "aliases": ["bedman", "ベッドマン"],
+      "aliases": ["be","bedman", "ベッドマン"],
       "iconPath": "icons/23_chibi_bed_a.png",
       "portraitPath": "assets/characters/portraits/bedman.png"
     },
@@ -188,7 +188,7 @@
       "id": "asuka",
       "name": "Asuka R#",
       "nameJa": "飛鳥＝R＃",
-      "aliases": ["asuka", "飛鳥", "アスカ"],
+      "aliases": ["as","asuka", "飛鳥", "アスカ"],
       "iconPath": "icons/24_chibi_ask.png",
       "portraitPath": "assets/characters/portraits/asuka.png"
     },
@@ -196,7 +196,7 @@
       "id": "johnny",
       "name": "Johnny",
       "nameJa": "ジョニー",
-      "aliases": ["johnny", "ジョニー"],
+      "aliases": ["jo","johnny", "ジョニー"],
       "iconPath": "icons/25_chibi_jhn.png",
       "portraitPath": "assets/characters/portraits/johnny.png"
     },
@@ -204,7 +204,7 @@
       "id": "elphelt",
       "name": "Elphelt Valentine",
       "nameJa": "エルフェルト＝ヴァレンタイン",
-      "aliases": ["elphelt", "エルフェルト"],
+      "aliases": ["el","elphelt", "エルフェルト"],
       "iconPath": "icons/26_chibi_elp.png",
       "portraitPath": "assets/characters/portraits/elphelt.png"
     },
@@ -212,7 +212,7 @@
       "id": "aba",
       "name": "A.B.A",
       "nameJa": "アバ",
-      "aliases": ["aba", "アバ"],
+      "aliases": ["ab","aba", "アバ"],
       "iconPath": "icons/27_chibi_aba.png",
       "portraitPath": "assets/characters/portraits/aba.png"
     },
@@ -220,7 +220,7 @@
       "id": "slayer",
       "name": "Slayer",
       "nameJa": "スレイヤー",
-      "aliases": ["slayer", "スレイヤー"],
+      "aliases": ["sl","slayer", "スレイヤー"],
       "iconPath": "icons/28_chibi_sly.png",
       "portraitPath": "assets/characters/portraits/slayer.png"
     },
@@ -228,7 +228,7 @@
       "id": "dizzy",
       "name": "Dizzy",
       "nameJa": "ディズィー",
-      "aliases": ["dizzy", "ディズィー"],
+      "aliases": ["di","dizzy", "ディズィー"],
       "iconPath": "icons/29_chibi_dzy.png",
       "portraitPath": "assets/characters/portraits/dizzy.png"
     },
@@ -236,7 +236,7 @@
       "id": "venom",
       "name": "Venom",
       "nameJa": "ヴェノム",
-      "aliases": ["venom", "ヴェノム"],
+      "aliases": ["ve","venom", "ヴェノム"],
       "iconPath": "icons/30_chibi_ven.png",
       "portraitPath": "assets/characters/portraits/venom.png"
     },
@@ -244,7 +244,7 @@
       "id": "unika",
       "name": "Unika",
       "nameJa": "ユニカ",
-      "aliases": ["unika", "ユニカ"],
+      "aliases": ["un","unika", "ユニカ"],
       "iconPath": "icons/31_chibi_uni.png",
       "portraitPath": "assets/characters/portraits/unika.png"
     },
