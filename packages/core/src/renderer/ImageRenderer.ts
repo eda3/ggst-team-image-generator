@@ -81,10 +81,10 @@ export class ImageRenderer {
     ctx.fillStyle = opts.fontColor;
     ctx.font = `bold ${opts.fontSize + 52}px "${opts.fontFamily}"`;
     ctx.textAlign = "center";
-    ctx.textBaseline = "top";
+    ctx.textBaseline = "bottom";
     ctx.strokeStyle = "#000000";
     ctx.lineWidth = 5;
-    const teamNameY = canvasHeight * 0.08;
+    const teamNameY = canvasHeight * 0.92;
     ctx.strokeText(teamName, canvasWidth / 2, teamNameY);
     ctx.fillText(teamName, canvasWidth / 2, teamNameY);
   }
@@ -144,8 +144,8 @@ export class ImageRenderer {
         ctx.textAlign = "center";
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 4;
-        ctx.strokeText(member.playerName, x, iconY + iconSize + 15);
-        ctx.fillText(member.playerName, x, iconY + iconSize + 15);
+        ctx.strokeText(member.playerName, x, iconY + iconSize + 80);
+        ctx.fillText(member.playerName, x, iconY + iconSize + 80);
       } catch {
         ctx.fillStyle = "#666666";
         ctx.fillRect(x - 40, y + 10, 80, 80);
