@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 GGST 3on3チーム画像生成ツール - Guilty Gear Striveの3on3形式大会向けに、チームのキャラクター構成とチーム名を視覚的に表現した画像を自動生成するCLI/Webツール。
 
+## Development Environment
+
+**IMPORTANT**: The user always uses PowerShell. All commands and examples should be PowerShell-compatible.
+
 ## Tech Stack
 
 - **Runtime**: Bun v1.1+
