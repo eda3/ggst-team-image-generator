@@ -105,6 +105,30 @@ describe("ImageRenderer", () => {
       expect(result.buffer.length).toBeGreaterThan(0);
     });
 
+    test("背景画像を指定できる", async () => {
+      const renderer = new ImageRenderer("assets");
+      const team = createMockTeam();
+      const result = await renderer.render(team, {
+        backgroundImage: "backgrounds/968007.jpg",
+      });
+
+      // 画像が正常に生成されることを確認
+      expect(result.buffer).toBeInstanceOf(Buffer);
+      expect(result.buffer.length).toBeGreaterThan(0);
+    });
+
+    test("存在しない背景画像を指定した場合、背景色にフォールバックする", async () => {
+      const renderer = new ImageRenderer("assets");
+      const team = createMockTeam();
+      const result = await renderer.render(team, {
+        backgroundImage: "backgrounds/nonexistent.jpg",
+      });
+
+      // エラーを投げずに背景色で描画される
+      expect(result.buffer).toBeInstanceOf(Buffer);
+      expect(result.buffer.length).toBeGreaterThan(0);
+    });
+
     test("フォントサイズを指定できる", async () => {
       const renderer = new ImageRenderer();
       const team = createMockTeam();

@@ -6,6 +6,7 @@ export interface ParsedArgs {
   layout?: "horizontal" | "vertical";
   width?: number;
   height?: number;
+  backgroundImage?: string;
   help?: boolean;
   version?: boolean;
   list?: boolean;
@@ -108,6 +109,12 @@ export function parseArgs(argv: string[]): ParsedArgs {
     if (arg === "--height") {
       const value = getNextArg(args, i, "--height");
       result.height = parsePositiveInt(value, "--height");
+      i += 2;
+      continue;
+    }
+
+    if (arg === "-b" || arg === "--background") {
+      result.backgroundImage = getNextArg(args, i, "--background");
       i += 2;
       continue;
     }

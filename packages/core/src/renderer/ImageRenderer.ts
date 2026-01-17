@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { type SKRSContext2D, createCanvas, loadImage } from "@napi-rs/canvas";
 import { characterRegistry } from "../registry/CharacterRegistry";
@@ -27,8 +28,7 @@ export class ImageRenderer {
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = opts.backgroundColor;
-    ctx.fillRect(0, 0, width, height);
+    await this.drawBackground(ctx, width, height, opts);
 
     this.drawTeamName(ctx, team.name, width, height, opts);
     await this.drawMembers(ctx, team, width, height, opts);
@@ -40,6 +40,31 @@ export class ImageRenderer {
       width,
       height,
     };
+  }
+
+  private async drawBackground(
+    ctx: SKRSContext2D,
+    canvasWidth: number,
+    canvasHeight: number,
+    opts: RenderOptions
+  ): Promise<void> {
+    if (opts.backgroundImage) {
+      try {
+        const backgroundPath = path.isAbsolute(opts.backgroundImage)
+          ? opts.backgroundImage
+          : path.join(this.assetsBasePath, opts.backgroundImage);
+        const imageBuffer = await readFile(backgroundPath);
+        const bgImage = await loadImage(imageBuffer);
+        ctx.drawImage(bgImage, 0, 0, canvasWidth, canvasHeight);
+      } catch (error) {
+        console.warn(`Failed to load background image: ${opts.backgroundImage}`, error);
+        ctx.fillStyle = opts.backgroundColor;
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      }
+    } else {
+      ctx.fillStyle = opts.backgroundColor;
+      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+    }
   }
 
   private drawTeamName(

@@ -5,6 +5,7 @@ export interface RenderOptionsInput {
   width?: number;
   height?: number;
   backgroundColor?: string;
+  backgroundImage?: string;
   fontFamily?: string;
   fontSize?: number;
   fontColor?: string;
@@ -15,6 +16,7 @@ export interface RenderOptions {
   width: number;
   height: number;
   backgroundColor: string;
+  backgroundImage?: string;
   fontFamily: string;
   fontSize: number;
   fontColor: string;

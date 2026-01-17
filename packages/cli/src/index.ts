@@ -23,6 +23,7 @@ generateオプション:
                          形式: "P1:sol,P2:ky,P3:may"
   -o, --output <dir>     出力ディレクトリ (デフォルト: ./output)
   -l, --layout <type>    レイアウト: horizontal | vertical
+  -b, --background <path> 背景画像のパス
   --width <px>           画像の幅
   --height <px>          画像の高さ
 
