@@ -4,7 +4,6 @@ export interface Character {
   nameJa: string;
   aliases: string[];
   iconPath: string;
-  portraitPath: string;
 }
 
 export type CharacterId = string;

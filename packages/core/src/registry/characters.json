@@ -5,256 +5,224 @@
       "name": "Sol Badguy",
       "nameJa": "ソル＝バッドガイ",
       "aliases": ["so","sol", "ソル"],
-      "iconPath": "icons/01_chibi_sol.png",
-      "portraitPath": "assets/characters/portraits/sol.png"
+      "iconPath": "icons/01_chibi_sol.png"
     },
     {
       "id": "ky",
       "name": "Ky Kiske",
       "nameJa": "カイ＝キスク",
       "aliases": ["ky", "カイ"],
-      "iconPath": "icons/02_chibi_ky.png",
-      "portraitPath": "assets/characters/portraits/ky.png"
+      "iconPath": "icons/02_chibi_ky.png"
     },
     {
       "id": "may",
       "name": "May",
       "nameJa": "メイ",
       "aliases": ["ma","may", "メイ"],
-      "iconPath": "icons/03_chibi_may.png",
-      "portraitPath": "assets/characters/portraits/may.png"
+      "iconPath": "icons/03_chibi_may.png"
     },
     {
       "id": "axl",
       "name": "Axl Low",
       "nameJa": "アクセル＝ロウ",
       "aliases": ["ax","axl", "アクセル"],
-      "iconPath": "icons/04_chibi_axl.png",
-      "portraitPath": "assets/characters/portraits/axl.png"
+      "iconPath": "icons/04_chibi_axl.png"
     },
     {
       "id": "chipp",
       "name": "Chipp Zanuff",
       "nameJa": "チップ＝ザナフ",
       "aliases": ["ch","chipp", "チップ"],
-      "iconPath": "icons/05_chibi_chp.png",
-      "portraitPath": "assets/characters/portraits/chipp.png"
+      "iconPath": "icons/05_chibi_chp.png"
     },
     {
       "id": "potemkin",
       "name": "Potemkin",
       "nameJa": "ポチョムキン",
       "aliases": ["po","pot", "potemkin", "ポチョ"],
-      "iconPath": "icons/06_chibi_pot.png",
-      "portraitPath": "assets/characters/portraits/potemkin.png"
+      "iconPath": "icons/06_chibi_pot.png"
     },
     {
       "id": "faust",
       "name": "Faust",
       "nameJa": "ファウスト",
       "aliases": ["fa","faust", "ファウスト"],
-      "iconPath": "icons/07_chibi_fau.png",
-      "portraitPath": "assets/characters/portraits/faust.png"
+      "iconPath": "icons/07_chibi_fau.png"
     },
     {
       "id": "millia",
       "name": "Millia Rage",
       "nameJa": "ミリア＝レイジ",
       "aliases": ["mi","millia", "ミリア"],
-      "iconPath": "icons/08_chibi_mll.png",
-      "portraitPath": "assets/characters/portraits/millia.png"
+      "iconPath": "icons/08_chibi_mll.png"
     },
     {
       "id": "zato",
       "name": "Zato-1",
       "nameJa": "ザトー＝ONE",
       "aliases": ["za","zato", "ザトー"],
-      "iconPath": "icons/09_chibi_zat.png",
-      "portraitPath": "assets/characters/portraits/zato.png"
+      "iconPath": "icons/09_chibi_zat.png"
     },
     {
       "id": "ramlethal",
       "name": "Ramlethal Valentine",
       "nameJa": "ラムレザル＝ヴァレンタイン",
       "aliases": ["ra","ram", "ramlethal", "ラム"],
-      "iconPath": "icons/10_chibi_ram.png",
-      "portraitPath": "assets/characters/portraits/ramlethal.png"
+      "iconPath": "icons/10_chibi_ram.png"
     },
     {
       "id": "leo",
       "name": "Leo Whitefang",
       "nameJa": "レオ＝ホワイトファング",
       "aliases": ["le","leo", "レオ"],
-      "iconPath": "icons/11_chibi_leo.png",
-      "portraitPath": "assets/characters/portraits/leo.png"
+      "iconPath": "icons/11_chibi_leo.png"
     },
     {
       "id": "nagoriyuki",
       "name": "Nagoriyuki",
       "nameJa": "名残雪",
       "aliases": ["na","nago", "nagoriyuki", "ナゴ"],
-      "iconPath": "icons/12_chibi_nag_b.png",
-      "portraitPath": "assets/characters/portraits/nagoriyuki.png"
+      "iconPath": "icons/12_chibi_nag_b.png"
     },
     {
       "id": "giovanna",
       "name": "Giovanna",
       "nameJa": "ジオヴァーナ",
       "aliases": ["gi","gio", "giovanna", "ジオ"],
-      "iconPath": "icons/13_chibi_gio.png",
-      "portraitPath": "assets/characters/portraits/giovanna.png"
+      "iconPath": "icons/13_chibi_gio.png"
     },
     {
       "id": "anji",
       "name": "Anji Mito",
       "nameJa": "御津闘慈",
       "aliases": ["an","anji", "アンジ"],
-      "iconPath": "icons/14_chibi_anj.png",
-      "portraitPath": "assets/characters/portraits/anji.png"
+      "iconPath": "icons/14_chibi_anj.png"
     },
     {
       "id": "ino",
       "name": "I-No",
       "nameJa": "イノ",
       "aliases": ["in","ino", "イノ"],
-      "iconPath": "icons/15_chibi_ino.png",
-      "portraitPath": "assets/characters/portraits/ino.png"
+      "iconPath": "icons/15_chibi_ino.png"
     },
     {
       "id": "goldlewis",
       "name": "Goldlewis Dickinson",
       "nameJa": "ゴールドルイス＝ディキンソン",
       "aliases": ["go","goldlewis", "ゴールドルイス", "金"],
-      "iconPath": "icons/16_chibi_gld.png",
-      "portraitPath": "assets/characters/portraits/goldlewis.png"
+      "iconPath": "icons/16_chibi_gld.png"
     },
     {
       "id": "jacko",
       "name": "Jack-O' Valentine",
       "nameJa": "ジャック・オー",
       "aliases": ["jc","jacko", "ジャック・オー", "ジャッコ"],
-      "iconPath": "icons/17_chibi_jko_a.png",
-      "portraitPath": "assets/characters/portraits/jacko.png"
+      "iconPath": "icons/17_chibi_jko_a.png"
     },
     {
       "id": "happychaos",
       "name": "Happy Chaos",
       "nameJa": "ハッピー・ケイオス",
       "aliases": ["ha","happychaos", "hc", "ハッピー"],
-      "iconPath": "icons/18_chibi_cos.png",
-      "portraitPath": "assets/characters/portraits/happychaos.png"
+      "iconPath": "icons/18_chibi_cos.png"
     },
     {
       "id": "baiken",
       "name": "Baiken",
       "nameJa": "梅喧",
       "aliases": ["ba","baiken", "梅喧", "バイケン"],
-      "iconPath": "icons/19_chibi_bkn.png",
-      "portraitPath": "assets/characters/portraits/baiken.png"
+      "iconPath": "icons/19_chibi_bkn.png"
     },
     {
       "id": "testament",
       "name": "Testament",
       "nameJa": "テスタメント",
       "aliases": ["te","testament", "テスタメント"],
-      "iconPath": "icons/20_chibi_tst.png",
-      "portraitPath": "assets/characters/portraits/testament.png"
+      "iconPath": "icons/20_chibi_tst.png"
     },
     {
       "id": "bridget",
       "name": "Bridget",
       "nameJa": "ブリジット",
       "aliases": ["br","bridget", "ブリジット"],
-      "iconPath": "icons/21_chibi_bgt.png",
-      "portraitPath": "assets/characters/portraits/bridget.png"
+      "iconPath": "icons/21_chibi_bgt.png"
     },
     {
       "id": "sin",
       "name": "Sin Kiske",
       "nameJa": "シン＝キスク",
       "aliases": ["si","sin", "シン"],
-      "iconPath": "icons/22_chibi_sin.png",
-      "portraitPath": "assets/characters/portraits/sin.png"
+      "iconPath": "icons/22_chibi_sin.png"
     },
     {
       "id": "bedman",
       "name": "Bedman?",
       "nameJa": "ベッドマン？",
       "aliases": ["be","bedman", "ベッドマン"],
-      "iconPath": "icons/23_chibi_bed_a.png",
-      "portraitPath": "assets/characters/portraits/bedman.png"
+      "iconPath": "icons/23_chibi_bed_a.png"
     },
     {
       "id": "asuka",
       "name": "Asuka R#",
       "nameJa": "飛鳥＝R＃",
       "aliases": ["as","asuka", "飛鳥", "アスカ"],
-      "iconPath": "icons/24_chibi_ask.png",
-      "portraitPath": "assets/characters/portraits/asuka.png"
+      "iconPath": "icons/24_chibi_ask.png"
     },
     {
       "id": "johnny",
       "name": "Johnny",
       "nameJa": "ジョニー",
       "aliases": ["jo","johnny", "ジョニー"],
-      "iconPath": "icons/25_chibi_jhn.png",
-      "portraitPath": "assets/characters/portraits/johnny.png"
+      "iconPath": "icons/25_chibi_jhn.png"
     },
     {
       "id": "elphelt",
       "name": "Elphelt Valentine",
       "nameJa": "エルフェルト＝ヴァレンタイン",
       "aliases": ["el","elphelt", "エルフェルト"],
-      "iconPath": "icons/26_chibi_elp.png",
-      "portraitPath": "assets/characters/portraits/elphelt.png"
+      "iconPath": "icons/26_chibi_elp.png"
     },
     {
       "id": "aba",
       "name": "A.B.A",
       "nameJa": "アバ",
       "aliases": ["ab","aba", "アバ"],
-      "iconPath": "icons/27_chibi_aba.png",
-      "portraitPath": "assets/characters/portraits/aba.png"
+      "iconPath": "icons/27_chibi_aba.png"
     },
     {
       "id": "slayer",
       "name": "Slayer",
       "nameJa": "スレイヤー",
       "aliases": ["sl","slayer", "スレイヤー"],
-      "iconPath": "icons/28_chibi_sly.png",
-      "portraitPath": "assets/characters/portraits/slayer.png"
+      "iconPath": "icons/28_chibi_sly.png"
     },
     {
       "id": "dizzy",
       "name": "Dizzy",
       "nameJa": "ディズィー",
       "aliases": ["di","dizzy", "ディズィー"],
-      "iconPath": "icons/29_chibi_dzy.png",
-      "portraitPath": "assets/characters/portraits/dizzy.png"
+      "iconPath": "icons/29_chibi_dzy.png"
     },
     {
       "id": "venom",
       "name": "Venom",
       "nameJa": "ヴェノム",
       "aliases": ["ve","venom", "ヴェノム"],
-      "iconPath": "icons/30_chibi_ven.png",
-      "portraitPath": "assets/characters/portraits/venom.png"
+      "iconPath": "icons/30_chibi_ven.png"
     },
     {
       "id": "unika",
       "name": "Unika",
       "nameJa": "ユニカ",
       "aliases": ["un","unika", "ユニカ"],
-      "iconPath": "icons/31_chibi_uni.png",
-      "portraitPath": "assets/characters/portraits/unika.png"
+      "iconPath": "icons/31_chibi_uni.png"
     },
     {
       "id": "queen_dizzy",
       "name": "Queen Dizzy",
       "nameJa": "クイーン・ディズィー",
       "aliases": ["queen_dizzy", "クイーンディズィー", "qd"],
-      "iconPath": "icons/29_chibi_dzy.png",
-      "portraitPath": "assets/characters/portraits/queen_dizzy.png"
+      "iconPath": "icons/32_chibi_qdz.png"
     }
   ]
 }
