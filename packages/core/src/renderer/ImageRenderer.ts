@@ -28,6 +28,10 @@ export class ImageRenderer {
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext("2d");
 
+    // 画像のスムージング設定（アンチエイリアス）
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+
     await this.drawBackground(ctx, width, height, opts);
 
     this.drawTeamName(ctx, team.name, width, height, opts);
@@ -75,10 +79,13 @@ export class ImageRenderer {
     opts: RenderOptions
   ): void {
     ctx.fillStyle = opts.fontColor;
-    ctx.font = `bold ${opts.fontSize + 8}px "${opts.fontFamily}"`;
+    ctx.font = `bold ${opts.fontSize + 52}px "${opts.fontFamily}"`;
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 5;
     const teamNameY = canvasHeight * 0.08;
+    ctx.strokeText(teamName, canvasWidth / 2, teamNameY);
     ctx.fillText(teamName, canvasWidth / 2, teamNameY);
   }
 
@@ -132,17 +139,23 @@ export class ImageRenderer {
 
         ctx.drawImage(image, iconX, iconY, iconSize, iconSize);
 
-        ctx.fillStyle = opts.fontColor;
-        ctx.font = `${opts.fontSize - 4}px "${opts.fontFamily}"`;
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = `bold ${opts.fontSize + 20}px "${opts.fontFamily}"`;
         ctx.textAlign = "center";
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 4;
+        ctx.strokeText(member.playerName, x, iconY + iconSize + 15);
         ctx.fillText(member.playerName, x, iconY + iconSize + 15);
       } catch {
         ctx.fillStyle = "#666666";
         ctx.fillRect(x - 40, y + 10, 80, 80);
 
-        ctx.fillStyle = opts.fontColor;
-        ctx.font = `${opts.fontSize - 4}px "${opts.fontFamily}"`;
+        ctx.fillStyle = "#000000";
+        ctx.font = `bold ${opts.fontSize + 8}px "${opts.fontFamily}"`;
         ctx.textAlign = "center";
+        ctx.strokeStyle = "#FFFFFF";
+        ctx.lineWidth = 3;
+        ctx.strokeText(member.playerName, x, y + 105);
         ctx.fillText(member.playerName, x, y + 105);
       }
     }
