@@ -75,13 +75,13 @@ describe("ImageRenderer", () => {
       expect(result.height).toBe(customHeight);
     });
 
-    test("デフォルトサイズ（800x300）で生成できる", async () => {
+    test("デフォルトサイズ（1920x1080）で生成できる", async () => {
       const renderer = new ImageRenderer();
       const team = createMockTeam();
       const result = await renderer.render(team);
 
-      expect(result.width).toBe(800);
-      expect(result.height).toBe(300);
+      expect(result.width).toBe(1920);
+      expect(result.height).toBe(1080);
     });
 
     test("幅と高さを同時に指定できる", async () => {
@@ -221,12 +221,12 @@ describe("DEFAULT_RENDER_OPTIONS", () => {
     expect(DEFAULT_RENDER_OPTIONS.layout).toBe("horizontal");
   });
 
-  test("widthのデフォルトは800", () => {
-    expect(DEFAULT_RENDER_OPTIONS.width).toBe(800);
+  test("widthのデフォルトは1920", () => {
+    expect(DEFAULT_RENDER_OPTIONS.width).toBe(1920);
   });
 
-  test("heightのデフォルトは300", () => {
-    expect(DEFAULT_RENDER_OPTIONS.height).toBe(300);
+  test("heightのデフォルトは1080", () => {
+    expect(DEFAULT_RENDER_OPTIONS.height).toBe(1080);
   });
 
   test('backgroundColorのデフォルトは"#1a1a2e"', () => {
@@ -237,8 +237,8 @@ describe("DEFAULT_RENDER_OPTIONS", () => {
     expect(DEFAULT_RENDER_OPTIONS.fontColor).toBe("#ffffff");
   });
 
-  test("fontSizeのデフォルトは24", () => {
-    expect(DEFAULT_RENDER_OPTIONS.fontSize).toBe(24);
+  test("fontSizeのデフォルトは48", () => {
+    expect(DEFAULT_RENDER_OPTIONS.fontSize).toBe(48);
   });
 
   test('fontFamilyのデフォルトは"Noto Sans JP"', () => {
