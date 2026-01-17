@@ -9,6 +9,7 @@ export interface RenderOptionsInput {
   fontFamily?: string;
   fontSize?: number;
   fontColor?: string;
+  tournamentName?: string;
 }
 
 export interface RenderOptions {
@@ -20,6 +21,7 @@ export interface RenderOptions {
   fontFamily: string;
   fontSize: number;
   fontColor: string;
+  tournamentName?: string;
 }
 
 export interface RenderResult {

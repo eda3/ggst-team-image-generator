@@ -34,6 +34,9 @@ export class ImageRenderer {
 
     await this.drawBackground(ctx, width, height, opts);
 
+    if (opts.tournamentName) {
+      this.drawTournamentName(ctx, opts.tournamentName, width, height, opts);
+    }
     this.drawTeamName(ctx, team.name, width, height, opts);
     await this.drawMembers(ctx, team, width, height, opts);
 
@@ -69,6 +72,24 @@ export class ImageRenderer {
       ctx.fillStyle = opts.backgroundColor;
       ctx.fillRect(0, 0, canvasWidth, canvasHeight);
     }
+  }
+
+  private drawTournamentName(
+    ctx: SKRSContext2D,
+    tournamentName: string,
+    canvasWidth: number,
+    canvasHeight: number,
+    opts: RenderOptions
+  ): void {
+    ctx.fillStyle = opts.fontColor;
+    ctx.font = `bold ${opts.fontSize + 32}px "${opts.fontFamily}"`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 5;
+    const tournamentNameY = canvasHeight * 0.05 + 80;
+    ctx.strokeText(tournamentName, canvasWidth / 2, tournamentNameY);
+    ctx.fillText(tournamentName, canvasWidth / 2, tournamentNameY);
   }
 
   private drawTeamName(

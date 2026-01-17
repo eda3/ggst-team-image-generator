@@ -26,6 +26,7 @@ export async function generateCommand(args: ParsedArgs): Promise<void> {
       width: args.width,
       height: args.height,
       backgroundImage: args.backgroundImage,
+      tournamentName: args.tournamentName,
     });
 
     const outputDir = args.output || path.join(process.cwd(), "output");

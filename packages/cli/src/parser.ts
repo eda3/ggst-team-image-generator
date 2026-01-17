@@ -7,6 +7,7 @@ export interface ParsedArgs {
   width?: number;
   height?: number;
   backgroundImage?: string;
+  tournamentName?: string;
   help?: boolean;
   version?: boolean;
   list?: boolean;
@@ -115,6 +116,12 @@ export function parseArgs(argv: string[]): ParsedArgs {
 
     if (arg === "-b" || arg === "--background") {
       result.backgroundImage = getNextArg(args, i, "--background");
+      i += 2;
+      continue;
+    }
+
+    if (arg === "-e" || arg === "--event") {
+      result.tournamentName = getNextArg(args, i, "--event");
       i += 2;
       continue;
     }

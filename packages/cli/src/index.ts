@@ -21,6 +21,7 @@ generateオプション:
   -t, --team <name>      チーム名 (必須)
   -m, --members <str>    メンバー情報 (必須)
                          形式: "P1:sol,P2:ky,P3:may"
+  -e, --event <name>     大会名 (任意、画像上部に表示)
   -o, --output <dir>     出力ディレクトリ (デフォルト: ./output)
   -l, --layout <type>    レイアウト: horizontal | vertical
   -b, --background <path> 背景画像のパス
@@ -33,7 +34,7 @@ generateオプション:
 
 例:
   ggst-team generate -t "チーム名" -m "Player1:sol,Player2:ky,Player3:may"
-  ggst-team generate -t "My Team" -m "P1:ソル,P2:カイ,P3:メイ" -l vertical
+  ggst-team generate -t "My Team" -m "P1:ソル,P2:カイ,P3:メイ" -e "GGST 3on3大会" -l vertical
   ggst-team list
 `);
 }
